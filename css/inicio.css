@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+body{
+     font-family: Comic Sans MS, Comic Sans, cursive; /* Muda a fonte de todo o body*/
+}
+
+
+/* Alteração em todo a página em questão do tamanho para evitar bugs*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+main{
+    background-color: #e6e6e6; 
+    padding: 20px; /* Adiciona um espaço interno (deixa um espaço entre a borda e o texto) */
+    height: auto;  /* Ajusta a altura com base no conteúdo interno */
+    width: auto; /* Ajusta a largura com base no conteúdo  */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura e altura */
+    
+}
+
+
+
+h1{
+    color: #000000; 
+    text-align: center; /*Deixa o texto do h1 no centro */
+   
+}
+
+h2{
+    color: #000000; 
+    text-align: center; 
+    
+}
+
+p{
+    color:#000000; 
+    text-align: justify; 
+}
+
+
+/*barra inicial*/
+
+header{
+
+background-color: #b2b7fa; 
+color: #413a7e; 
+width: 100% ; /* Largura do header ocupa 100% do body */
+padding: 10px 20px; /* Espaço interno de 10 pixels em cima e embaixo e 20 pixels nas laterais */
+margin: auto; /* Centraliza o header horizontalmente se a largura for menor que a largura do body */
+position: sticky;
+    top: 0;
+    z-index: 1000; /* Garante que o header fique sobre outros conteúdos */
+background: linear-gradient(to right, #b2b7fa, #8c84d1); 
+border-bottom: 2px solid #000000; /* Linha fina na parte inferior */
+
+
+    a {
+        color: inherit; /* Herda a cor do texto do header ( tira a cor azul do link) */
+        text-decoration: none; /* Remove o sublinhado padrão dos links */
+    }
+
+    h3:hover { /* Mudanças no texto ao passar o mouse */
+        color: #431a44; 
+        font-size: 36px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+        transition: color 0.6s ease, font-size 0.6s ease, text-shadow 0.6s ease; /* Transição suave e lenta para as propriedades */
+        
+       
+       }
+             
+}
+
+
+
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores (bolinhas) da lista não ordenada */
+    margin: 0; 
+    padding: 0%;  
+    display: flex; /* Faz com que os itens da lista sejam exibidos em uma linha (layout flexível) */
+    align-items: center; 
+    gap: 20px; /* Define um espaço fixo de 30 pixels entre os itens da lista */
+}
+
+
+
+nav ul li a {
+    color: #bea1ec;  
+    text-decoration: none; 
+    font-weight: bold; /* Torna o texto dos links em negrito */
+    
+}
+
+
+/* Ajustes para dispositivos móveis */
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+       
+    }
+}
+
+
+img {
+    border-radius: 10px;
+    box-shadow: 10 15px 15px #000000
+}
+
+
+/*Diferenciais*/
+
+section {
+    padding: 30px;
+    margin-bottom: 20px;
+    border: 2px solid #000000;
+    box-shadow: 2px 5px 7px black;
+    background:radial-gradient( #b2b7fa, #8c84d1)
+}
+
+
+
+/*Rodapé*/
+
+footer {
+    background-color: #1f1f1f; /* Cor de fundo do rodapé */
+    color: #ffffff; /* Cor do texto */
+    padding: 20px 0; /* Espaço interno */
+    text-align: center; /* Centraliza o texto */
+    border: 2px solid #000000;
+    border-radius: 10px;
+
+}
+
+.Rodapé {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.Rodapé > div {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.Rodapé-sobre h2,.Rodapé-links h2,.Rodapé-Contato h2 {
+    border-bottom: 2px solid #bea1ec; /* Linha abaixo dos títulos */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.Rodapé-links ul {
+    list-style-type: none; /* Remove os marcadores */
+    padding: 0;
+}
+
+.Rodapé-links ul li {
+    margin: 5px 0;
+}
+
+.Rodapé-links a {
+    color: #ffffff; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
+}
+.Rodapé-Contato a{
+    color: #ffffff;
+}
+
+
+
+
+
+
